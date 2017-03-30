@@ -1,2 +1,2 @@
-# Angular2_Intro_Course
-Repository for Angular 2 - The Complete Guide by Maximilian Schwarzmüller
+# Angular 4, Understanding TypeScript, Angular Styling & Animations.
+Repository for Angular 4 - The Complete Guide, Understanding TypeScript and Angular Styling & Animations courses by Maximilian Schwarzmüller.
