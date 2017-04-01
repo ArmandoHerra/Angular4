@@ -58,18 +58,16 @@ console.log(userData);
 //Complex Object.
 var complex = {
     data: [100, 3.99, 10],
-    output: function (all) {
+    output: function () {
         return this.data;
     }
 };
-console.log(complex);
 var complex2 = {
     data: [1, 2, 3],
-    output: function (all) {
+    output: function () {
         return this.data;
     }
 };
-console.log(complex2);
 //Union types.
 var myRealRealAge = 27;
 myRealRealAge = "27";
@@ -89,3 +87,4 @@ var canBeNull = null;
 //Undefined because not initialized.
 var canAlsoBeNull;
 canAlsoBeNull = null;
+//# sourceMappingURL=types.js.map

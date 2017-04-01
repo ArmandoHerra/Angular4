@@ -72,24 +72,22 @@ let userData: {
 console.log(userData);
 
 //Complex Object.
-let complex: {data: number[], output: (all: boolean) => number[]} = {
+let complex: {data: number[], output: () => number[]} = {
     data: [100, 3.99, 10],
-    output: function (all: boolean): number[] {
+    output: function (): number[] {
         return this.data;
     }
 };
-console.log(complex);
 
 //Type alias.
-type Complex = {data: number[], output: (all: boolean) => number[]};
+type Complex = {data: number[], output: () => number[]};
 
 let complex2: Complex = {
     data: [1, 2, 3],
-    output: function (all: boolean): number[] {
+    output: function (): number[] {
         return this.data;
     }
 };
-console.log(complex2);
 
 //Union types.
 let myRealRealAge: number | string = 27;
