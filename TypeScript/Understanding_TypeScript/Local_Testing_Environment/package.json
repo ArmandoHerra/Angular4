@@ -1,0 +1,23 @@
+{
+  "name": "local_test_environment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SekethThoth/Angular4.git"
+  },
+  "author": "ArmandoHerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SekethThoth/Angular4/issues"
+  },
+  "homepage": "https://github.com/SekethThoth/Angular4#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
