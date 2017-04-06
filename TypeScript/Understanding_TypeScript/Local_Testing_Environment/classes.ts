@@ -11,9 +11,10 @@ class Person {
 
     printAge() {
         console.log(this.age);
+        this.setType("Old guy");
     }
 
-    setType(type: string) {
+    private setType(type: string) {
         this.type = type;
         console.log(this.type);
     }
@@ -23,4 +24,14 @@ class Person {
 const person = new Person("Armando", "SekethThoth369");
 console.log(person);
 person.printAge();
-person.setType("Cool guy");
+
+//Inheritance.
+class Seketh extends Person {
+    constructor(name: string, username: string) {
+        super(name, username);
+        this.age = 25;
+    }
+}
+
+const newSeketh = new Seketh("Seketh123", "Seketh123");
+console.log(newSeketh);
