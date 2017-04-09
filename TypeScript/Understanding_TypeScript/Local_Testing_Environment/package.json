@@ -19,5 +19,8 @@
   "homepage": "https://github.com/SekethThoth/Angular4#readme",
   "devDependencies": {
     "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "tsc": "^1.20150623.0"
   }
 }
