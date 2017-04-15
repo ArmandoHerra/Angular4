@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
 	declarations: [
@@ -19,7 +20,8 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 		FooterComponent,
         WarningComponent,
         SuccessComponent,
-        StringInterpolationComponent
+        StringInterpolationComponent,
+        PropertyBindingComponent
 	],
 	imports: [
 		BrowserModule,
