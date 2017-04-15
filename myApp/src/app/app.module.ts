@@ -9,6 +9,7 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,8 @@ import { SuccessComponent } from './success/success.component';
 		BodyComponent,
 		FooterComponent,
         WarningComponent,
-        SuccessComponent
+        SuccessComponent,
+        StringInterpolationComponent
 	],
 	imports: [
 		BrowserModule,
