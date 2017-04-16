@@ -9,6 +9,7 @@ export class PropertyBindingComponent implements OnInit {
 
     allowNewMessage = false;
     messageCreationStatus = "No message was created.";
+	messageName = "";
 
 	constructor() {
         setTimeout(() => {
@@ -22,5 +23,9 @@ export class PropertyBindingComponent implements OnInit {
     onCreateMessage() {
         this.messageCreationStatus = "Message was created!";
     }
+
+	onUpdateMessageName(event: Event) {
+		this.messageName = (<HTMLInputElement>event.target).value;
+	}
 
 }
