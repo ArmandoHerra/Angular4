@@ -9,7 +9,7 @@ export class PropertyBindingComponent implements OnInit {
 
     allowNewMessage = false;
     messageCreationStatus = "No message was created.";
-	messageName = "";
+	messageName = "Test Message";
 
 	constructor() {
         setTimeout(() => {
@@ -21,7 +21,7 @@ export class PropertyBindingComponent implements OnInit {
 	}
 
     onCreateMessage() {
-        this.messageCreationStatus = "Message was created!";
+        this.messageCreationStatus = "Message was created! Name is " + this.messageName;
     }
 
 	onUpdateMessageName(event: Event) {

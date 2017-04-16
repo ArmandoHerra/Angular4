@@ -7,7 +7,7 @@
         <p>Property Binding: <span [innerText]="allowNewMessage"></span></p>
         <!-- Event Binding -->
         <p >Event Binding: </p>
-        <button class="btn btn-success" (click)="onCreateMessage()">Click Me!</button>
+        <button class="btn btn-success" (click)="onCreateMessage()">Create Message!</button>
         <p> {{ messageCreationStatus }} </p>
         <!-- Passing and using data with event binding. -->
         <label>Message Name</label>
@@ -16,6 +16,13 @@
             class="form-control"
             (input) = "onUpdateMessageName($event)"
         >
-        <p> Dynamic Message: {{ messageName }} </p>
+        <!-- <p> Dynamic Message: {{ messageName }} </p> -->
+        <br>
+        <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="messageName"
+        >
+        <!-- <p> Dynamic Message - Two Way Binding: {{ messageName }} </p> -->
     </div>
 </div>
