@@ -1,9 +1,13 @@
 <div class="row">
     <div class="col-md-12">
-        <button class="btn btn-primary" [disabled]="!allowNewMessage">Button :D</button>
+        <button class="btn btn-primary" [disabled]="!allowNewMessage" (click)="onCreateMessage()">Button :D</button>
         <!-- String Interpolation -->
         <p>String Interpolation: <span>{{ allowNewMessage }}</span></p>
         <!-- Property Binding -->
         <p>Property Binding: <span [innerText]="allowNewMessage"></span></p>
+        <!-- Event Binding -->
+        <p >Event Binding: </p>
+        <button class="btn btn-success" (click)="onCreateMessage()">Click Me!</button>
+        <p> {{ messageCreationStatus }} </p>
     </div>
 </div>

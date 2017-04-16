@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PropertyBindingComponent implements OnInit {
 
     allowNewMessage = false;
+    messageCreationStatus = "No message was created.";
 
 	constructor() {
         setTimeout(() => {
@@ -17,5 +18,9 @@ export class PropertyBindingComponent implements OnInit {
 
 	ngOnInit() {
 	}
+
+    onCreateMessage() {
+        this.messageCreationStatus = "Message was created!";
+    }
 
 }
