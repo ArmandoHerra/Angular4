@@ -8,7 +8,9 @@
         <!-- Event Binding -->
         <p >Event Binding: </p>
         <button class="btn btn-success" (click)="onCreateMessage()">Create Message!</button>
-        <p> {{ messageCreationStatus }} </p>
+        <br>
+        <!-- <p> {{ messageCreationStatus }} </p> -->
+        <p *ngIf="messageCreated">Message was created, message is: {{ messageName }}</p>
         <!-- Passing and using data with event binding. -->
         <label>Message Name</label>
         <input
