@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-string-interpolation',
 	templateUrl: './string-interpolation.component.html',
 	styleUrls: ['./string-interpolation.component.css']
 })
-export class StringInterpolationComponent implements OnInit {
+export class StringInterpolationComponent {
 
-    messageID: number = 2;
+    messageID: number = 10;
     messageStatus: string = "Offline";
 
 	constructor() {
-		this.messageStatus = Math.random() > 0.5 ? "online" : "offline";
+		var random = Math.random();
+		if (random > 0.5) {
+			this.messageStatus = "Online";
+		} else {
+			this.messageStatus = "Offline";
+		}
 	}
 
     getMessageStatus() {
@@ -19,11 +24,6 @@ export class StringInterpolationComponent implements OnInit {
     }
 
 	getColor() {
-		return this.messageStatus = "online" ? "green" : "red";
+		return this.messageStatus === "Online" ? "green" : "red";
 	}
-
-	ngOnInit() {
-
-	}
-
 }
