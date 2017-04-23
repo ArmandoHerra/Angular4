@@ -2,7 +2,11 @@
     <div class="col-md-12">
         <p>String Interpolation.</p>
         <p>ID: {{ messageID }} </p>
-        <p [ngStyle]="{backgroundColor: getColor()}">Status: {{ getMessageStatus() }} </p>
-        <p [ngStyle]="{backgroundColor: getColor()}">Status: {{ getMessageStatus() }} </p>
+        <p
+            [ngStyle]="{backgroundColor: getColor()}"
+            [ngClass]="{online: messageStatus === 'Online'}"
+        >
+            Status: {{ getMessageStatus() }}
+        </p>
     </div>
 </div>
