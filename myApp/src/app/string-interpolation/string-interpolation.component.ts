@@ -7,16 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StringInterpolationComponent implements OnInit {
 
-    ComponentID: number = 2;
-    ComponentStatus: string = "Offline";
+    messageID: number = 2;
+    messageStatus: string = "Offline";
 
-	constructor() { }
+	constructor() {
+		this.messageStatus = Math.random() > 0.5 ? "online" : "offline";
+	}
 
-    getComponentStatus() {
-        return this.ComponentStatus;
+    getMessageStatus() {
+        return this.messageStatus;
     }
 
+	getColor() {
+		return this.messageStatus = "online" ? "green" : "red";
+	}
+
 	ngOnInit() {
+
 	}
 
 }
