@@ -11,6 +11,7 @@ export class PropertyBindingComponent implements OnInit {
     messageCreationStatus = "No message was created.";
 	messageName = "Test Message";
 	messageCreated = false;
+	messages = ["Test Message", "Test Message 2"]
 
 	constructor() {
         setTimeout(() => {
@@ -23,6 +24,7 @@ export class PropertyBindingComponent implements OnInit {
 
     onCreateMessage() {
 		this.messageCreated = true;
+		this.messages.push(this.messageName);
         this.messageCreationStatus = "Message was created! Name is " + this.messageName;
     }
 
