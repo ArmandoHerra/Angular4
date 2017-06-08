@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<button (click)="onClick()">Display Details</button>
+<p *ngIf="paragraphDisplay">Hi I'm a magic Paragraph</p>
+<p>Click Log:</p>
+<p
+	*ngFor="let log of counterLog"
+	[ngStyle]="{backgroundColor: getBackgroundColor()}"
+	[ngClass]="{valid: valid == true}"
+>
+	{{counterLog}}
+</p>
