@@ -1,0 +1,29 @@
+<h1 align="center">Angular Databinding and Directives</h1>
+
+<h2 align="center">Add Server</h2>
+
+<label>Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<br>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
+	Add Server
+</button>
+<hr>
+
+<h2 align="center">serverName</h2>
+<p>Server Name: {{serverName}}</p>
+<!-- <p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p> -->
+<br><hr>
+
+<h2 align="center">serverCreationStatus</h2>
+<p>{{serverCreationStatus}}</p>
+<br><hr>
+
+<h2>*ngIf-else Directive</h2>
+<p *ngIf="serverCreated; else noServer">{{serverCreationStatus}} it's name is {{serverName}}</p>
+<ng-template #noServer>
+	<p>No server has been created.</p>
+</ng-template>
+<br><hr>
