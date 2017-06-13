@@ -7,18 +7,21 @@ import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 
+import { LoggingService } from './shared/logging.service';
+import { AccountService } from './shared/account.service';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    AccountComponent,
-    NewAccountComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		AccountComponent,
+		NewAccountComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		HttpModule
+	],
+	providers: [AccountService, LoggingService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
