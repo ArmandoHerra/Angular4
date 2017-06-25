@@ -16,11 +16,11 @@ import {CoreModule} from './core/core.module';
     imports: [
         BrowserModule,
         HttpModule,
-        AppRoutingModule,
         SharedModule,
         ShoppingListModule,
         AuthModule,
-        CoreModule
+        CoreModule,
+        AppRoutingModule
     ],
     bootstrap: [AppComponent]
 })
