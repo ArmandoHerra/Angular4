@@ -57,6 +57,10 @@ export class RecipeEditComponent implements OnInit {
         this.router.navigate(['../'], {relativeTo: this.route});
     }
 
+    getControls() {
+        return (<FormArray>this.recipeForm.get('ingredients')).controls;
+    }
+
     private initForm() {
         let recipeName = '';
         let recipeImgPath = '';
@@ -73,7 +77,7 @@ export class RecipeEditComponent implements OnInit {
                 for (let ingredient of recipe.ingredients) {
                     recipeIngredients.push(
                         new FormGroup({
-                           'name': new FormControl(ingredient.name, Validators.required),
+                            'name': new FormControl(ingredient.name, Validators.required),
                             'amount': new FormControl(
                                 ingredient.amount,
                                 [Validators.required, Validators.pattern(/^[1-9]+[0+-9]*$/)]
